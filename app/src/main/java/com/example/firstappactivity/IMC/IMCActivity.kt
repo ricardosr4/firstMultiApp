@@ -1,5 +1,6 @@
 package com.example.firstappactivity.IMC
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -31,6 +32,10 @@ class IMCActivity : AppCompatActivity() {
     private lateinit var btnMayorEdad: FloatingActionButton
     private lateinit var tvEdad: TextView
     private lateinit var btnCalcular: Button
+
+    companion object{
+        const val IMC_KEY = "IMC_RESULT"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,22 +101,31 @@ class IMCActivity : AppCompatActivity() {
             setEdad()
         }
         btnCalcular.setOnClickListener {
-            calculateIMC()
+            val result = calculateIMC()
+            navigateToResult(result)
         }
 
     }
 
-    private fun calculateIMC() {
-        val imc = currentPeso/(currentAltura.toDouble()/100 * currentAltura.toDouble()/100)
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this, ResultIMCActivity::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
+    }
+
+    private fun calculateIMC(): Double {
+        val df = DecimalFormat("#.##")
+        val imc = currentPeso / (currentAltura.toDouble() / 100 * currentAltura.toDouble() / 100)
+        return df.format(imc).toDouble()
     }
 
     private fun setPeso() {
         tvPeso.text = currentPeso.toString()
     }
+
     private fun setEdad() {
         tvEdad.text = currentEdad.toString()
     }
-
 
     private fun changeGender() {
         isMaleSelected = !isMaleSelected

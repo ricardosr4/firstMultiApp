@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.FirstAppActivity" parent="Base.Theme.FirstAppActivity" />
+
+    //Dialog Style
+    <style name="FullScreenDialogStyle">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
 </resources>

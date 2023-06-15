@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="8dp"
-    tools:context=".MenuActivity">
+    tools:context=".menuActivity.MenuActivity">
 
     <Button
         android:id="@+id/btnSaludar"
@@ -24,5 +24,23 @@
         android:layout_height="wrap_content"
         android:textSize="22dp"
         android:text="IMC APP"/>
+
+    <Button
+        android:id="@+id/btnSuperHero"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:text="Super Hero App"/>
+
+    <Button
+        android:id="@+id/btnApiDog"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:text="Busca tu Perro App"/>
+
+
 
   </LinearLayout>

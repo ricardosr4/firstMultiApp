@@ -3,6 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    //Aqui se agrega la paleta de colores
+    // colores para app IMC
+
     <color name="blue">#0B29CF</color>
     <color name="pink">#E00E55</color>
     <color name="orange">#F21808</color>
@@ -10,5 +13,20 @@
     <color name="green">#1ECD25</color>
     <color name="purple_dark">#560465</color>
     <color name="green_dark">#055C09</color>
+    <color name="gris_otro">#A1A4A1</color>
+
+    <color name="peso_bajo">#FFEB3B</color>
+    <color name="peso_normal">#1ECD25</color>
+    <color name="peso_sodbrepeso">#FF5722</color>
+    <color name="peso_obesidad">#952805</color>
+
+    //color stat super heroes
+    <color name="superHero_stat_intelligence">#81EB06</color>
+    <color name="superHero_stat_strength">#C607E7</color>
+    <color name="superHero_stat_speed">#CEE305</color>
+    <color name="superHero_stat_durability">#F2B705</color>
+    <color name="superHero_stat_power">#EA3C04</color>
+    <color name="superHero_stat_combat">#0F8EF4</color>
+
 
 </resources>
